@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
     'Barryvdh\Debugbar\ServiceProvider',
     'Way\Generators\GeneratorsServiceProvider',
+    'Frozennode\Administrator\AdministratorServiceProvider',
 
 	),
 
