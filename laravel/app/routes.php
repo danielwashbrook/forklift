@@ -23,6 +23,15 @@ Route::get('/', function()
 	return View::make('index');
 });
 
+  Route::group(array('prefix' => 'debug'), function() {
+
+    // since we will be using this just for CRUD, we won't need create and edit
+    // Angular will handle both of those forms
+    // this ensures that a user can't access api/create or api/edit when there's nothing there
+    Route::resource('features', 'FeaturesController',
+      array('only' => array('index', 'store', 'destroy')));
+  });
+
 // =============================================
 // API ROUTES ==================================
 // =============================================
